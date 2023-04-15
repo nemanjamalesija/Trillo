@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
 
 @import './base';
-@import './components';
 @import './layout';
 
-.search__icon {
-}
+// components
+@import './components/search';
+@import './components/navigation';
+
+// mixins
