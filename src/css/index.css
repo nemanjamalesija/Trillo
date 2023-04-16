@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap");
 :root {
   --color-primary: #eb2f64;
@@ -83,6 +84,7 @@ body {
 }
 
 .detail {
+  font-size: 1.4rem;
   display: flex;
   padding: 4.5rem;
   background-color: 1px solid var(--color-grey-light-1);
@@ -90,7 +92,6 @@ body {
 }
 
 .description {
-  font-size: 1.4rem;
   background-color: #fff;
   flex: 0 0 60%;
   margin-right: 4.5rem;
@@ -99,8 +100,10 @@ body {
 }
 
 .user-reviews {
-  background-color: yellowgreen;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .search {
@@ -254,6 +257,7 @@ body {
 
 .btn-inline {
   display: inline-block;
+  font-weight: 600;
   border: none;
   color: var(--color-primary);
   background-color: transparent;
@@ -263,8 +267,15 @@ body {
   cursor: pointer;
   transition: all 0.2 infinite;
 }
+.btn-inline span {
+  margin-left: 3px;
+  transition: margin-left 0.2s;
+}
 .btn-inline:hover {
   color: var(--color-grey-dark-1);
+}
+.btn-inline:hover span {
+  margin-left: 8px;
 }
 .btn-inline:focus {
   outline: none;
@@ -371,6 +382,9 @@ body {
   display: flex;
   align-items: center;
 }
+.recommend__count {
+  margin-right: auto;
+}
 .recommend__photo {
   box-sizing: content-box;
   height: 4rem;
@@ -380,6 +394,61 @@ body {
 }
 .recommend__photo:not(:last-child) {
   margin-right: -1.5rem;
+}
+
+.review {
+  position: relative;
+  overflow: hidden;
+  background-color: #fff box-shadow var(--shadow-light);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+}
+.review::before {
+  content: "“";
+  font-size: 20rem;
+  font-family: sans-serif;
+  color: var(--color-grey-light-2);
+  position: absolute;
+  left: -1rem;
+  top: -2.75rem;
+  line-height: 1;
+  z-index: 90;
+}
+.review__text {
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 100;
+}
+.review__user {
+  display: flex;
+  align-items: center;
+}
+.review__photo {
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 50%;
+}
+.review__user-box {
+  margin-left: 1.5rem;
+}
+.review__user-rating {
+  margin-left: auto;
+}
+.review__user-name {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: var(--color-grey-dark-2);
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+.review__user-date {
+  font-size: 1rem;
+  color: var(--color-grey-dark-3);
+}
+.review__user-rating {
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: var(--color-primary);
 }
 
 /*# sourceMappingURL=index.css.map */
